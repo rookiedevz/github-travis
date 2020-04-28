@@ -13,6 +13,8 @@ cache:
     - "$HOME/.m2"
 
 before_install:
+  - pwd
+  - ls
   - chmod +x mvnw
 #  - chmod +x ./deployment/deploy.sh
 
