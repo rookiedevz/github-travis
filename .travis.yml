@@ -25,7 +25,7 @@ script: "./mvnw clean package -U"
 #deploy:
 #  - provider: script
 #    skip_cleanup: true
-#    script: "bash deployment/deploy.sh"
+#    script: "bash deploy.sh"
 #    on:
 #      tags: true
 
