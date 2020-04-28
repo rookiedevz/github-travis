@@ -3,7 +3,7 @@ sudo: required
 language: java
 
 jdk:
-  - openjdk11
+  - openjdk8
 
 services:
   - docker
@@ -13,9 +13,7 @@ cache:
     - "$HOME/.m2"
 
 before_install:
-  - pwd
-  - ls
-  - chmod +x mvnw
+  - chmod +x ./mvnw
 #  - chmod +x ./deployment/deploy.sh
 
 install: true
