@@ -12,20 +12,22 @@ cache:
   directories:
     - "$HOME/.m2"
 
-before_install:
-  - chmod +x ./mvnw
-  - chmod +x ./deployment/deploy.sh
+#before_install:
+#  - chmod +x ./mvnw
+#  - chmod +x ./deployment/deploy.sh
 
 install: true
 
-script: "cp .travis.settings.xml $HOME/.m2/settings.xml && ./mvnw clean package -U"
+#script: "cp .travis.settings.xml $HOME/.m2/settings.xml && ./mvnw clean package -U"
 
-deploy:
-  - provider: script
-    skip_cleanup: true
-    script: "bash deployment/deploy.sh"
-    on:
-      tags: true
+script: "./mvnw clean package -U"
+
+#deploy:
+#  - provider: script
+#    skip_cleanup: true
+#    script: "bash deployment/deploy.sh"
+#    on:
+#      tags: true
 
 
 
